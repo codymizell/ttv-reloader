@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "TTV-Reloader",
+  "author": "cody",
+  "version": "0.1",
+  "description": "reloads the webpage when error #2000 occurs on twitch",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitch.tv/videos/*"
+      ],
+      "css": [],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  }
+}
