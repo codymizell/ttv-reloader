@@ -26,7 +26,7 @@ window.onload = () => {
     if (errorMsg.length > 0) {
       if (errorMsg[0].outerHTML.match(/(#[0-9]000)/)) {
         console.log('%cTTV-Reloader [ ' + '%cerror detected' + '%c ]', 'color: #00b4eb', 'color: white', 'color: #00b4eb');
-        await hrome.runtime.sendMessage({ text: 'reload', state: 'enable' })
+        await chrome.runtime.sendMessage({ text: 'reload' })
       }
     }
   }, 5000)

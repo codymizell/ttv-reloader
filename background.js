@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   }
 
   if (msg.url) url = msg.url + '?t=';
-  if (msg.timestamp) {
+  if (msg.timestamp !== '00:00:00') {
     let temp = msg.timestamp.replace(/:/, 'h').replace(/:/, 'm') + 's'
     console.log(temp);
     url += temp
