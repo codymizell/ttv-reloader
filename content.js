@@ -5,7 +5,6 @@ window.onload = () => {
 
     if (!errorMsg.length > 0) {
       const timestamp = document.querySelector('.video-player p[data-a-target="player-seekbar-current-time"]').textContent
-      console.log(timestamp);
       while (!timestamp) {
         document.querySelector('.video-player p[data-a-target="player-seekbar-current-time"]').textContent
       }
